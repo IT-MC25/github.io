@@ -1,0 +1,44 @@
+:root{
+  --maxw:1000px;
+  --accent:#2b7a78;
+  --muted:#666;
+  --bg:#f7f7f7;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  margin:0;
+  color:#222;
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--maxw);margin:0 auto;padding:20px}
+.site-header{background:#fff;border-bottom:1px solid #e6e6e6}
+.header-inner{display:flex;justify-content:space-between;align-items:center}
+.site-header nav a{margin-left:16px;color:var(--muted);text-decoration:none}
+#brand{font-size:18px;margin:0;padding:14px 0;color:var(--accent)}
+
+.hero{background:linear-gradient(90deg, #e6fbf7, #ffffff);padding:28px;border-radius:8px;margin:16px 0}
+.hero h2{margin:0 0 8px;font-size:22px}
+.btn{display:inline-block;padding:10px 14px;border-radius:6px;background:var(--accent);color:white;text-decoration:none;border:none;cursor:pointer;margin-top:8px}
+
+.card{background:var(--card);padding:18px;border-radius:8px;margin:14px 0;box-shadow:0 1px 3px rgba(0,0,0,0.03)}
+.booking-grid{display:flex;gap:18px;flex-wrap:wrap}
+.booking-left{flex:1 1 280px}
+.booking-right{flex:1 1 280px}
+label{display:block;margin-top:10px;font-weight:600;font-size:13px}
+input[type="text"],input[type="email"],input[type="tel"],select,input[type="date"]{
+  width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #ddd;background:#fff;
+}
+.times{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.time-slot{padding:8px 10px;border-radius:6px;border:1px solid #ccc;cursor:pointer;background:#fafafa}
+.time-slot.booked{opacity:0.4;cursor:not-allowed;text-decoration:line-through}
+.info{margin-top:12px;padding:10px;border-radius:6px;background:#eef6f5;color:#0a3f3d}
+.admin-list{margin-top:10px;padding:10px;background:#f9f9f9;border-radius:6px;max-height:200px;overflow:auto;border:1px solid #eee}
+
+.site-footer{padding:16px 0;text-align:center;color:var(--muted);margin-top:20px}
+@media (max-width:700px){
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .site-header nav{margin-top:6px}
+}
